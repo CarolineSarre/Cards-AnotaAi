@@ -89,3 +89,27 @@
   .pizza{
     background-color: yellow;
   }
+  .busca{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding:0px;
+    height: 48px;
+}
+#campo_busca{
+    padding-left: 10px;
+    border: 1px solid;
+    border-radius: 5px 0px 0px 5px; 
+    color:#C0C0C0;
+    height: 48px;
+    width: 650px;
+    float: left;
+}
+.buscar_produto{
+    border: 0px solid;
+    border-radius: 0px 5px 5px 0px;
+    color:#C0C0C0;
+    height: 48px;
+    width: 45px;
+    float: left;
+    color:#ffffff;
+}
