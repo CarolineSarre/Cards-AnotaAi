@@ -24,4 +24,8 @@ export class AppComponent {
     });
     
   }
+
+  deleteCard(i: number) {
+    this.cards.splice(i, 1);
+  }
 }
