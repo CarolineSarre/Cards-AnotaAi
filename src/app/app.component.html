@@ -1,4 +1,10 @@
-<div>
- {{this.cards}}
+<div class="row">
+  <div class="column" *ngFor="let card of cards">
+      <div class="card">
+        <img src={{card.img}} style="width:100%">
+        <h3>{{card.title}}</h3>
+        <p>{{card.description}}</p>
+      </div>
+  </div>
 </div>
 
