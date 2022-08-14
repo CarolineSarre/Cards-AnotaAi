@@ -1,3 +1,5 @@
+<div class="container">
+  <app-header></app-header>
 <div class="row">
   <div class="busca">
     <input type="text" id="campo_busca" [formControl]="queryField"/>
@@ -23,9 +25,7 @@
   >
     <div class="card">
       <button class="close-btn" (click)="deleteCard(i)">
-        <img
-          src="http://aai-frontend-interview-mock-data.s3-website-sa-east-1.amazonaws.com/assets/close.svg"
-        />
+        <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Close</title><path fill="#FF0000" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368"/></svg>
       </button>
       <img src="{{ card.img }}" class="imagem" />
       <span class="tipo">{{ card.type }}</span>
@@ -33,4 +33,5 @@
       <p class="short-text">{{ card.description }}</p>
     </div>
   </div>
+</div>
 </div>

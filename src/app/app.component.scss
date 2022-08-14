@@ -1,10 +1,13 @@
 * {
     box-sizing: border-box;
   }
-  
+  .container{
+    background-color: #ebebeb;
+    height: 980px;
+  }
   body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #efefef;
+    
   }
   p{
     font-size: 13px;
@@ -35,6 +38,7 @@
     margin: 5px;
     position: relative;
     transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background-color: #ffffff;
   }
   .card:after{
     position:absolute;
@@ -70,7 +74,7 @@
   }
   .tipo{
     position: absolute;
-    top:38%;
+    top:43%;
     right:3%;
     background-color: #dfdfdf;
     border-radius: 5px;
@@ -99,13 +103,13 @@
   }
  
   .paisagem{
-    background-color: blue;
+    background-color: #005eff;
   }
   .flor{
-    background-color: pink;
+    background-color: #ff0048;
   }
   .pizza{
-    background-color: yellow;
+    background-color: #928c00;
   }
   .busca{
     margin-top: 50px;
@@ -125,9 +129,9 @@
 .buscar_produto{
     border: 0px solid;
     border-radius: 0px 5px 5px 0px;
-    color:#C0C0C0;
     height: 48px;
     width: 45px;
     float: left;
     color:#ffffff;
+    background-color: #ffffff;
 }
