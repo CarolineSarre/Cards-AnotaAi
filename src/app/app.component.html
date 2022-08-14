@@ -1,9 +1,9 @@
 <div class="container">
   <app-header></app-header>
   <div class="row">
-    <div class="busca">
-      <input type="text" id="campo_busca" [formControl]="queryField" />
-      <button type="submit" class="buscar_produto" (click)="onSearch()">
+    <div class="search">
+      <input type="text" id="field_search" [formControl]="queryField" />
+      <button type="submit" class="search_card" (click)="onSearch()">
         <img
           height="20"
           src="https://icones.pro/wp-content/uploads/2021/06/icone-loupe-noir.png"
@@ -11,7 +11,7 @@
       </button>
       <button
         type="submit"
-        class="buscar_produto"
+        class="search_card"
         *ngIf="this.limpar == true"
         (click)="limparFiltro()"
       >
@@ -37,8 +37,8 @@
           >
             <title>Close</title>
             <path
-              fill="#FF0000"
-              stroke="currentColor"
+              fill="gray"
+              stroke="gray"
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="32"
@@ -53,10 +53,8 @@
             flor: card.type == 2,
             pizza: card.type == 3
           }"
-          class="tipo"
-          id="type"
-          ></span
-        >
+          class="type"
+        ></span>
         <h2>{{ card.title }}</h2>
         <p class="short-text">{{ card.description }}</p>
       </div>
