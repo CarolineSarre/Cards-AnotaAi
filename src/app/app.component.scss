@@ -80,6 +80,7 @@
     border-radius: 5px;
     font-size: 10px;
     padding: 3px;
+    color: #ffffff;
   }
   .short-text{
     overflow: hidden; 
@@ -104,12 +105,22 @@
  
   .paisagem{
     background-color: #005eff;
+    
+  }
+  .paisagem::before{
+    content: "Paisagem"
   }
   .flor{
     background-color: #ff0048;
   }
+  .flor::before{
+    content: "Flor";
+  }
   .pizza{
     background-color: #928c00;
+  }
+  .pizza::before{
+    content: "Pizza"
   }
   .busca{
     margin-top: 50px;

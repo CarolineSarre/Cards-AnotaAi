@@ -1,37 +1,65 @@
 <div class="container">
   <app-header></app-header>
-<div class="row">
-  <div class="busca">
-    <input type="text" id="campo_busca" [formControl]="queryField"/>
-    <button type="submit" class="buscar_produto" (click)="onSearch()">
-      <img
-        height="20"
-        src="https://icones.pro/wp-content/uploads/2021/06/icone-loupe-noir.png"
-      />
-    </button>
-    <button type="submit" class="buscar_produto" *ngIf="this.limpar == true" (click)="limparFiltro()">
-      <img
-        height="20"
-        src="https://w7.pngwing.com/pngs/602/718/png-transparent-computer-icons-recycle-bin-rectangle-recycle-bin-black-and-white.png"
-      />
-    </button>
-  </div>
-</div>
-<div class="row">
-  <div
-    class="column"
-    *ngFor="let card of cards; let i = index"
-    [attr.data-index]="i"
-  >
-    <div class="card">
-      <button class="close-btn" (click)="deleteCard(i)">
-        <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Close</title><path fill="#FF0000" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368"/></svg>
+  <div class="row">
+    <div class="busca">
+      <input type="text" id="campo_busca" [formControl]="queryField" />
+      <button type="submit" class="buscar_produto" (click)="onSearch()">
+        <img
+          height="20"
+          src="https://icones.pro/wp-content/uploads/2021/06/icone-loupe-noir.png"
+        />
       </button>
-      <img src="{{ card.img }}" class="imagem" />
-      <span class="tipo">{{ card.type }}</span>
-      <h2>{{ card.title }}</h2>
-      <p class="short-text">{{ card.description }}</p>
+      <button
+        type="submit"
+        class="buscar_produto"
+        *ngIf="this.limpar == true"
+        (click)="limparFiltro()"
+      >
+        <img
+          height="20"
+          src="https://w7.pngwing.com/pngs/602/718/png-transparent-computer-icons-recycle-bin-rectangle-recycle-bin-black-and-white.png"
+        />
+      </button>
     </div>
   </div>
-</div>
+  <div class="row">
+    <div
+      class="column"
+      *ngFor="let card of cards; let i = index"
+      [attr.data-index]="i"
+    >
+      <div class="card">
+        <button class="close-btn" (click)="deleteCard(i)">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="ionicon"
+            viewBox="0 0 512 512"
+          >
+            <title>Close</title>
+            <path
+              fill="#FF0000"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="32"
+              d="M368 368L144 144M368 144L144 368"
+            />
+          </svg>
+        </button>
+        <img src="{{ card.img }}" class="imagem" />
+        <span
+          [ngClass]="{
+            paisagem: card.type == 1,
+            flor: card.type == 2,
+            pizza: card.type == 3
+          }"
+          class="tipo"
+          id="type"
+          ></span
+        >
+        <h2>{{ card.title }}</h2>
+        <p class="short-text">{{ card.description }}</p>
+      </div>
+    </div>
+  </div>
 </div>
